@@ -9,6 +9,3 @@ coverage = "*"
 
 [packages]
 flask = "*"
-
-[requires]
-python_version = "3.8"
