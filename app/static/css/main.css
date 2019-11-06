@@ -1,0 +1,23 @@
+body {
+    background-color: #7abaff;
+}
+
+form {
+    padding: 20px;
+}
+
+form .actions {
+    padding: 15px;
+}
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    background-color: white;
+    padding: 20px;
+    max-width: 650px;
+    border-radius: 10px;
+    text-align: center;
+}
