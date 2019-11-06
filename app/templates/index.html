@@ -1,4 +1,9 @@
 {% extends "shared/layout.html" %}
 {% block contents %}
-    <h1>URL Shortener</h1>
+        <form>
+            <input type="text" class="form-control" name="url" placeholder="URL" required>
+            <div class="actions">
+                <input type="submit" class="btn btn-success" name="submit" value="Get Short Link">
+            </div>
+        </form>
 {% endblock %}

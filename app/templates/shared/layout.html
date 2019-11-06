@@ -25,15 +25,19 @@
     <title>URL Shortener</title>
 
     <!-- Stylesheets -->
-    <link ref="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}">
 	<link rel="apple-touch-icon" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
 </head>
 <body>
-    {% block contents %}
-    {% endblock %}
+	<div class="container" id="main">
+		<h1>URL Shortener</h1>
+    	{% block contents %}
+    	{% endblock %}
+	</div>
 
     <!-- Load JS -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
