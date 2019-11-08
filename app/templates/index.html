@@ -1,9 +1,10 @@
 {% extends "shared/layout.html" %}
 {% block contents %}
-        <form>
+        <form action="" method="post">
             <input type="text" class="form-control" name="url" placeholder="URL" required>
             <div class="actions">
                 <input type="submit" class="btn btn-success" name="submit" value="Get Short Link">
             </div>
         </form>
+        {{ short_url }}
 {% endblock %}
