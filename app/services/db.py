@@ -19,6 +19,9 @@ def get_next_index(db_path: Path):
 
 def add_link(db_path: Path, key: str, value: str):
     """Add new key value pair to db"""
+    if not (value.startswith("https://") or value.startswith("http://")):
+        value = f"https://{value}"
+
     with open(str(db_path), "a") as f:
         f.write(f"{key} {value}\n")
 
