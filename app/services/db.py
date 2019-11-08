@@ -1,9 +1,10 @@
 from pathlib import Path
 
+
 def _read_db(db_path: Path):
     """Read all links from db text file"""
     links = {}
-    with open(db_path) as f:
+    with open(str(db_path)) as f:
         for line in f.readlines():
             index, link = line.strip().split(" ")
             links[index] = link
