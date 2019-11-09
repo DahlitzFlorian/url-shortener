@@ -10,3 +10,4 @@ coverage = "*"
 [packages]
 flask = "*"
 importlib-metadata = "*"
+sqlalchemy = "*"
