@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  shortener:
+    build: ./
+    image: shortener:latest
+    networks:
+      - default
+      - traefik-public
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.frontend.rule=Host:${SHORTDOMAIN}
+        - traefik.enable=true
+        - traefik.port=80
+        - traefik.tags=traefik-public
+        - traefik.docker.network=traefik-public
+        - traefik.redirectorservice.frontend.entryPoints=http
+        - traefik.redirectorservice.frontend.redirect.entryPoint=https
+        - traefik.webservice.frontend.entryPoints=https
+        - traefik.frontend.redirect.regex=^https?://www.${SHORTDOMAIN}/(.*)
+        - traefik.frontend.redirect.replacement=https://${SHORTDOMAIN}/$${1}
+
+networks:
+  traefik-public:
+    external: true
