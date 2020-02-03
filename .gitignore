@@ -13,3 +13,6 @@ __pycache__/
 
 # TODO
 TODO
+
+# ignore sqlite files
+*.sqlite
