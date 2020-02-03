@@ -7,6 +7,7 @@ from app.data.modelbase import SqlAlchemyBase
 
 class Link(SqlAlchemyBase):
     __tablename__ = "links"
+    __table_args__ = {'extend_existing': True}
 
     id = sa.Column(sa.Integer, primary_key=True)
     created_date = sa.Column(sa.DateTime, default=datetime.datetime.now, index=True)
