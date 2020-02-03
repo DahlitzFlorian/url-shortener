@@ -2,7 +2,7 @@ import sqlalchemy as sa
 import sqlalchemy.orm as orm
 from sqlalchemy.orm import Session
 
-from pypi_org.data.modelbase import SqlAlchemyBase
+from app.data.modelbase import SqlAlchemyBase
 
 __factory = None
 
@@ -23,7 +23,7 @@ def global_init(db_file: str):
     __factory = orm.sessionmaker(bind=engine)
 
     # noinspection PyUnresolvedReferences
-    import pypi_org.data.__all_models
+    import app.data.__all_models
 
     SqlAlchemyBase.metadata.create_all(engine)
 
