@@ -10,6 +10,10 @@ form .actions {
     padding: 15px;
 }
 
+.form-control-margin ~ .form-control-margin {
+    margin-top: 10px;
+}
+
 #main {
     margin-left: auto;
     margin-right: auto;
