@@ -1,1 +1,1 @@
-import app.data.link
+import data.link

@@ -1,8 +1,6 @@
-from pathlib import Path
-
 from flask import render_template, redirect, Blueprint
 
-from app.services import db
+from services import db
 
 blueprint = Blueprint("redirection_service", __name__, template_folder="templates")
 
