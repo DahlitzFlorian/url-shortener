@@ -16,18 +16,27 @@ jobs:
       Linux_Python37:
         vmImage: 'ubuntu-latest'
         python.version: '3.7'
+      Linux_Python38:
+        vmImage: 'ubuntu-latest'
+        python.version: '3.8'
       Mac_Python36:
         vmImage: 'macos-latest'
         python.version: '3.6'
       Mac_Python37:
         vmImage: 'macos-latest'
         python.version: '3.7'
+      Mac_Python38:
+        vmImage: 'macos-latest'
+        python.version: '3.8'
       Windows_Python36:
         vmImage: 'windows-latest'
         python.version: '3.6'
       Windows_Python37:
         vmImage: 'windows-latest'
         python.version: '3.7'
+      Windows_Python38:
+        vmImage: 'windows-latest'
+        python.version: '3.8'
     maxParallel: 2
   steps:
   - task: UsePythonVersion@0
