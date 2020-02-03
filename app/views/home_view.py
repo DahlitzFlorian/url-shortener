@@ -1,3 +1,5 @@
+import os
+
 from flask import render_template, Blueprint, request
 
 from services import db
@@ -13,6 +15,11 @@ def home():
     context = {}
 
     if request.method == "POST":
+        shortener_password = os.environ.get("shortener_password")
+        if not shortener_password or request.form.get("password") != shortener:
+            context["short_url"] = "Wrong password"
+            return render_template("index.html", **context)
+
         url = request.form.get("url")
 
         next_index = db.get_next_index()

@@ -1,7 +1,8 @@
 {% extends "shared/layout.html" %}
 {% block contents %}
         <form action="" method="post">
-            <input type="text" class="form-control" name="url" placeholder="URL" required>
+            <input type="text" class="form-control form-control-margin" name="url" placeholder="URL" required>
+            <input type="password" class="form-control form-control-margin" name="password" placeholder="Password" required>
             <div class="actions">
                 <input type="submit" class="btn btn-success" name="submit" value="Get Short Link">
             </div>
