@@ -1,7 +1,7 @@
 from flask import render_template, Blueprint, request
 
-from app.services import db
-from app.services import shortener
+from services import db
+from services import shortener
 
 blueprint = Blueprint("home", __name__, template_folder="templates")
 DOMAIN = "https://fld.yt/s"

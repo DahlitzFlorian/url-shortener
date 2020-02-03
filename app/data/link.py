@@ -2,7 +2,7 @@ import datetime
 
 import sqlalchemy as sa
 
-from app.data.modelbase import SqlAlchemyBase
+from data.modelbase import SqlAlchemyBase
 
 
 class Link(SqlAlchemyBase):
