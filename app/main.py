@@ -13,4 +13,4 @@ app.register_blueprint(redirect_view.blueprint)
 setup_db()
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", port=8000, debug=True)
+    app.run("0.0.0.0", port=8000, debug=False)
