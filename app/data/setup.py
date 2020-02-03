@@ -4,5 +4,5 @@ from data.db_session import global_init
 
 
 def setup_db():
-    db_file = str(Path(__file__).parent / "shortener.sqlite")
+    db_file = str(Path(__file__).parent / ".." / "db" / "shortener.sqlite")
     global_init(db_file)
