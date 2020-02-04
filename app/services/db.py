@@ -32,7 +32,10 @@ def get_link(key: str):
     """Get link for a provided key"""
     actual_id = saturate(key.rsplit('/', 1)[-1])
     session: Session = db_session.create_session()
-    return session.query(Link).get({"id": actual_id}).destination
+    try:
+        return session.query(Link).get({"id": actual_id}).destination
+    except AttributeError:
+        return None
 
 
 def check_link_exist(destination: str):
