@@ -7,6 +7,8 @@ services:
     networks:
       - default
       - traefik-public
+    volumes:
+      - shortener-data:/app/data
     deploy:
       replicas: 1
       labels:
@@ -24,3 +26,6 @@ services:
 networks:
   traefik-public:
     external: true
+
+volumes:
+  shortener-data:
