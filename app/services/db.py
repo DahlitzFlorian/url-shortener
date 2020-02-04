@@ -32,3 +32,14 @@ def get_link(key: str):
     actual_id = saturate(key.rsplit('/', 1)[-1])
     session: Session = db_session.create_session()
     return session.query(Link).get({"id": actual_id}).destination
+
+
+def check_link_exist(destination: str):
+    """Check if link already exists and return otherwise return None"""
+    session: Session = db_session.create_session()
+    result = session.execute(f"SELECT short_link FROM links WHERE destination = '{destination}'")  # fix possible SQL injection
+
+    for row in result:
+        return row[0]
+    else:
+        return None

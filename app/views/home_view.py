@@ -22,7 +22,7 @@ def home():
 
         url = request.form.get("url")
 
-        db_url = db.get_link(url)
+        db_url = db.check_link_exist(url)
         if db_url is not None:
             context["short_url"] = db_url
             return render_template("index.html", **context)
