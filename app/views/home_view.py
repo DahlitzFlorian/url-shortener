@@ -16,7 +16,7 @@ def home():
 
     if request.method == "POST":
         shortener_password = os.environ.get("shortener_password")
-        if not shortener_password or request.form.get("password") != shortener:
+        if not shortener_password or request.form.get("password") != shortener_password:
             context["short_url"] = "Wrong password"
             return render_template("index.html", **context)
 
