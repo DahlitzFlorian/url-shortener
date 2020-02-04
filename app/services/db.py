@@ -14,7 +14,7 @@ def get_next_index():
         try:
             return row[0] + 1
         except TypeError:
-            return 0
+            return 1 
 
 
 def add_link(key: str, value: str):
