@@ -20,8 +20,6 @@ services:
         - traefik.redirectorservice.frontend.entryPoints=http
         - traefik.redirectorservice.frontend.redirect.entryPoint=https
         - traefik.webservice.frontend.entryPoints=https
-        - traefik.frontend.redirect.regex=^https?://www.${SHORTDOMAIN}/(.*)
-        - traefik.frontend.redirect.replacement=https://${SHORTDOMAIN}/$${1}
 
 networks:
   traefik-public:
