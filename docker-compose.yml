@@ -7,6 +7,8 @@ services:
     networks:
       - default
       - traefik-public
+    environment:
+      - shortener_password=${shortener_password}
     volumes:
       - shortener-data:/app/data
     deploy:
