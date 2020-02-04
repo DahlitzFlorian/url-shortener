@@ -11,9 +11,10 @@ def get_next_index():
     result = session.execute("SELECT MAX(ROWID) FROM links")
 
     for row in result:
-        return row[0] + 1
-    else:
-        return 0
+        try:
+            return row[0] + 1
+        except TypeError:
+            return 0
 
 
 def add_link(key: str, value: str):
