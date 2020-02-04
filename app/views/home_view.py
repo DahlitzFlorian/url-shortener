@@ -22,6 +22,11 @@ def home():
 
         url = request.form.get("url")
 
+        db_url = db.get_link(url)
+        if db_url is not None:
+            context["short_url"] = db_url
+            return render_template("index.html", **context)
+
         next_index = db.get_next_index()
         key = shortener.dehydrate(next_index)
         short_url = f"{DOMAIN}/{key}"
