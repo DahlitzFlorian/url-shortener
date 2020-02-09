@@ -26,13 +26,21 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}">
 	<link rel="apple-touch-icon" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-secondary justify-content-between">
+        <a class="navbar-brand" href="{{ url_for('home.home') }}">URL Shortener</a>
+        <div class="container nav-container">
+            <a class="nav-link" target="_blank" href="https://florian-dahlitz.de"><img src="{{ url_for('static', filename='svgs/regular/user.svg') }}" alt="User Icon"></a>
+            <a class="nav-link" target="_blank" href="https://github.com/DahlitzFlorian/url-shortener"><img src="{{ url_for('static', filename='svgs/brands/github.svg') }}" alt="GitHub Icon"></a>
+            <a class="nav-link nav-link-twitter" target="_blank" href="https://twitter.com/DahlitzF"><img src="{{ url_for('static', filename='svgs/brands/twitter.svg') }}" alt="Twitter Icon"></a>
+        </div>
+    </nav>
 	<div class="container" id="main">
 		<h1>URL Shortener</h1>
     	{% block contents %}
