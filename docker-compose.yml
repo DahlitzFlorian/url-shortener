@@ -10,7 +10,7 @@ services:
     environment:
       - shortener_password=${shortener_password}
     volumes:
-      - shortener-data:/app/data
+      - shortener-data:/app/db
     deploy:
       replicas: 1
       labels:
