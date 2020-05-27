@@ -1,5 +1,6 @@
-from flask import render_template, redirect, Blueprint
-
+from flask import Blueprint
+from flask import redirect
+from flask import render_template
 from services import db
 
 blueprint = Blueprint("redirection_service", __name__, template_folder="templates")

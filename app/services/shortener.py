@@ -35,7 +35,7 @@ def true_chr(integer):
         return chr(integer + LOWERCASE_OFFSET)
     else:
         raise ValueError(
-            f"{integer} is not a valid integer in the range of base {BASE}"
+            f"{integer} is not a valid integer in the range of base {BASE}",
         )
 
 

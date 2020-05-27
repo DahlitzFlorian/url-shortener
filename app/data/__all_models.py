@@ -1,1 +1,1 @@
-import data.link
+import data.link  # noqa: F401

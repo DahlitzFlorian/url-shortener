@@ -1,6 +1,5 @@
-from flask import Flask
-
 from data.setup import setup_db
+from flask import Flask
 
 app = Flask(__name__)
 

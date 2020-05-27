@@ -1,7 +1,8 @@
 import os
 
-from flask import render_template, Blueprint, request
-
+from flask import Blueprint
+from flask import render_template
+from flask import request
 from services import db
 from services import shortener
 

@@ -6,7 +6,7 @@ import pytest
 @pytest.fixture
 def empty_db(tmpdir):
     db_path = Path(tmpdir) / "db.txt"
-    with open(db_path, "w") as f:
+    with open(db_path, "w") as f:  # noqa: F841
         pass
     return tmpdir
 
