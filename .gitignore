@@ -16,3 +16,6 @@ TODO
 
 # ignore sqlite files
 *.sqlite
+
+# mypy
+.mypy_cache/
