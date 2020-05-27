@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "url-shortener"
+version = "0.1.0"
+description = ""
+authors = ["Florian Dahlitz <contact@florian-dahlitz.de>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+flask = "*"
+importlib-metadata = "*"
+sqlalchemy = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+coverage = "*"
+
+[build-system]
+requires = ["poetry>=1.0.5"]
+build-backend = "poetry.masonry.api"
