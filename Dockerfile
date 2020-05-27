@@ -1,4 +1,4 @@
-FROM tiangolo/meinheld-gunicorn-flask:python3.7-alpine3.8
+FROM tiangolo/meinheld-gunicorn-flask:python3.8-alpine3.11
 
 ENV POETRY_VERSION=1.0.5
 
